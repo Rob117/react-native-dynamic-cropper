@@ -5,6 +5,10 @@
 
 This library is iOS only right now - Android coming soon, I hope. This is to fulfill a specific need of a dynamic image cropper for both platforms that isn't available in a neat NPM package.
 
+# DANGER
+
+This is the first release of this library, and it is NOT functional right now. I'm currently working on resolving this issue, please stay tuned.
+
 `$ npm install react-native-dynamic-cropper --save`
 
 ### First Step
