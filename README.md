@@ -23,7 +23,7 @@ pod init
 podfile:
 
 ```
-platform :ios, '9.0'
+platform :ios, '8.0'
 
 target '<project_name>' do
   # this is very important to have!
