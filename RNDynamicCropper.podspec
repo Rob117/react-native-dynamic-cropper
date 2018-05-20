@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.authors      = { "rob117" => "" }
   s.source       = { :git => "https://github.com/rob117/react-native-dynamic-cropper.git", :tag => 'v#{version}' }
-  s.source_files  = "ios/*.{h,m}"
+  s.source_files  = "ios/src/*.{h,m}"
   s.requires_arc = true
   s.dependency "React"
   s.dependency "TOCropViewController"
