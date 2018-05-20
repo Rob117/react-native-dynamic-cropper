@@ -8,8 +8,15 @@
 
 #import "RNDynamicCropper.h"
 #import "React/RCTLog.h"
-#import <TOCropViewController.h>
 #import "AppDelegate.h"
+
+#if __has_include("TOCropViewController.h")
+#import "TOCropViewController.h"
+#elif __has_include(<TOCropViewControllerController/TOCropViewControllerController.h>)
+#import <TOCropViewControllerController/TOCropViewControllerController.h>
+#else
+#import "TOCropViewController/TOCropViewController.h"
+#endif
 
 @interface RNDynamicCropper()
 @property(nonatomic, strong) RCTPromiseResolveBlock resolver;
@@ -31,9 +38,19 @@ RCT_EXPORT_METHOD(cropImage:(NSString *)path resolve:(RCTPromiseResolveBlock)res
     TOCropViewController *cropViewController = [[TOCropViewController alloc] initWithImage:image];
     cropViewController.delegate = self;
     UINavigationController* contactNavigator = [[UINavigationController alloc] initWithRootViewController:cropViewController];
-    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [delegate.window.rootViewController presentViewController:contactNavigator animated:NO completion:nil];
+     [[self getRootVC] presentViewController:contactNavigator animated:NO completion:nil];
   });
+}
+
+// Copied from https://github.com/ivpusic/react-native-image-crop-picker/blob/master/ios/src/ImageCropPicker.m
+// Actually, pretty much this whole thing was like 5 tutorials and looking at this for reference
+- (UIViewController*) getRootVC {
+  UIViewController *root = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+  while (root.presentedViewController != nil) {
+    root = root.presentedViewController;
+  }
+  
+  return root;
 }
 
 -(void)cropViewController:(TOCropViewController *)cropViewController didCropToImage:(UIImage *)image withRect:(CGRect)cropRect angle:(NSInteger)angle
