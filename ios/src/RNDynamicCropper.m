@@ -1,22 +1,22 @@
 //
-//  NativeCropView.m
+//  RNDynamicCropper.m
 //  camtest
 //
 //  Created by Robert Sherling on 2018/05/05.
 //  Copyright © 2018 Facebook. All rights reserved.
 //
 
-#import "NativeCropView.h"
+#import "RNDynamicCropper.h"
 #import "React/RCTLog.h"
 #import <TOCropViewController.h>
 #import "AppDelegate.h"
 
-@interface NativeCropView()
+@interface RNDynamicCropper()
 @property(nonatomic, strong) RCTPromiseResolveBlock resolver;
 @property(nonatomic, strong) RCTPromiseRejectBlock reject;
 @end
 
-@implementation NativeCropView
+@implementation RNDynamicCropper
 
 RCT_EXPORT_MODULE();
 

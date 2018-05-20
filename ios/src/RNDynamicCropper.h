@@ -1,5 +1,5 @@
 //
-//  NativeCropView.h
+//  RNDynamicCropper.h
 //  camtest
 //
 //  Created by Robert Sherling on 2018/05/05.
@@ -10,6 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <React/RCTBridge.h>
 
-@interface NativeCropView : NSObject <RCTBridgeModule>
+@interface RNDynamicCropper : NSObject <RCTBridgeModule>
 
 @end
