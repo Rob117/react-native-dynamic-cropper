@@ -8,7 +8,6 @@
 
 #import "RNDynamicCropper.h"
 #import "React/RCTLog.h"
-#import "AppDelegate.h"
 
 #if __has_include("TOCropViewController.h")
 #import "TOCropViewController.h"
