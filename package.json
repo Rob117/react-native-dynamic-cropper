@@ -1,6 +1,6 @@
 {
   "name": "react-native-dynamic-cropper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Take an image in a react native app and crop it dynamically",
   "main": "index.js",
   "scripts": {

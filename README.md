@@ -1,32 +1,38 @@
-
 # react-native-dynamic-cropper
 
 ## NOTE
 
 This library is iOS only right now - Android coming soon, I hope. This is to fulfill a specific need of a dynamic image cropper for both platforms that isn't available in a neat NPM package.
 
-# DANGER
+## Screenshots
 
-This is the first release of this library, and it is NOT functional right now. I'm currently working on resolving this issue, please stay tuned.
+Coming soon, in gif form!
 
-<!-- `$yarn add react-native-dynamic-cropper` -->
+## Warning
+
+This library was just released, so it still does not have error handing, cancel button support, etc., I plan to introduce those things as fast as possible. After, I want to add a testing suite to allow for open source contributions.
+
+## Install
+
+first, `yarn add react-native-dynamic-cropper`
 
 ### iOS
 
-Cocoapods support only - the library is a react-native wrapper for another library which means that you have to install that one as well.
+Cocoapods support only - the library is a react-native wrapper for another library, so we use Cocoapods to manage all of our dependencies. Make sure you have the Cocoapods gem installed.
 
 ```
 cd ios
 pod init
 ```
 
-podfile:
+Example Podfile:
 
 ```
 platform :ios, '8.0'
 
 target '<project_name>' do
-  # this is very important to have!
+  # This allows us to install our locally-included React pod. Have this in your file.
+  # learned from https://github.com/ivpusic/react-native-image-crop-picker
   rn_path = '../node_modules/react-native'
   pod 'yoga', path: "#{rn_path}/ReactCommon/yoga/yoga.podspec"
   pod 'React', path: rn_path, subspecs: [
@@ -43,10 +49,11 @@ target '<project_name>' do
     'RCTWebSocket'
   ]
 
+  # This pod
   pod 'RNDynamicCropper', :path =>  '../node_modules/react-native-dynamic-cropper'
 end
 
-# very important to have, unless you removed React dependencies for Libraries 
+# very important to have, unless you removed React dependencies for Libraries
 # and you rely on Cocoapods to manage it
 post_install do |installer|
   installer.pods_project.targets.each do |target|
@@ -57,11 +64,24 @@ post_install do |installer|
 end
 ```
 
-## Usage
-```javascript
-import DynamicCropper from 'react-native-dynamic-cropper';
+### Android
 
-// TODO: What to do with the module?
-console.log(DynamicCropper) // Should not be null
+Not there yet.
+
+## Usage
+
+```javascript
+import DynamicCropper from "react-native-dynamic-cropper";
+
+DynamicCropper.cropImage(pathToImageOnDisk).then(newlyCroppedImagePath =>
+  console.log(newlyCroppedImagePath)
+);
 ```
-  
+
+## License
+
+MIT
+
+## In case of abandonment
+
+If I don't respond to any issues or pull requests in 60 days, assume the worst. In that case, I officially support the react native community github group cloning this project and becoming the official maintainers.
