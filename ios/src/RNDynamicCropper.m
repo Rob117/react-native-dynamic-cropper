@@ -66,7 +66,7 @@ RCT_EXPORT_METHOD(cropImage:(NSString *)path resolve:(RCTPromiseResolveBlock)res
   self.resolver(filePath);
 }
 
-- (void)cropViewController:(TOCropViewController *)cropViewController didFinishCancelled:(bool)cancelled
+- (void)cropViewController:(TOCropViewController *)cropViewController didFinishCancelled:(BOOL)cancelled
 {
     RCTLog(@'No Problem, cancel pressed');
     [cropViewController dismissViewControllerAnimated:YES completion:nil];
