@@ -42,7 +42,7 @@ RCT_EXPORT_METHOD(cropImage:(NSString *)path resolve:(RCTPromiseResolveBlock)res
 }
 
 // Copied from https://github.com/ivpusic/react-native-image-crop-picker/blob/master/ios/src/ImageCropPicker.m
-// Actually, pretty much this whole thing was like 5 tutorials and looking at this for reference
+// Actually, pretty much this whole thing was like 5 tutorials and looking at this for reference, and help from an amazing freelancer.
 - (UIViewController*) getRootVC {
   UIViewController *root = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
   while (root.presentedViewController != nil) {
@@ -64,6 +64,11 @@ RCT_EXPORT_METHOD(cropImage:(NSString *)path resolve:(RCTPromiseResolveBlock)res
   [cropViewController dismissViewControllerAnimated:YES completion:nil];
   // Return the path so it can be manipulated elsewhere.
   self.resolver(filePath);
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
