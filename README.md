@@ -16,8 +16,6 @@ This library was just released, so it still does not have error handing, cancel 
 
 first, `yarn add react-native-dynamic-cropper`
 
-next, `yarn` to install it.
-
 ### iOS
 
 Cocoapods support only - the library is a react-native wrapper for another library, so we use Cocoapods to manage all of our dependencies. Make sure you have the Cocoapods gem installed.
