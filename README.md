@@ -10,11 +10,18 @@ Coming soon, in gif form!
 
 ## Warning
 
-This library was just released, so it still does not have error handing, cancel button support, etc., I plan to introduce those things as fast as possible. After, I want to add a testing suite to allow for open source contributions.
+This library was just released, so it still does not have error handing, test cases, etc. I plan to introduce those things as fast as possible.
+
+Roadmap:
+
+Circular crop option
+Locale support
+Title, done button, cancel button custom text
+Add testing script (it's not pretty, but it totally works)
 
 ## Install
 
-first, `yarn add react-native-dynamic-cropper`
+`yarn add react-native-dynamic-cropper`
 
 ### iOS
 
@@ -77,6 +84,18 @@ DynamicCropper.cropImage(pathToImageOnDisk).then(newlyCroppedImagePath =>
   console.log(newlyCroppedImagePath)
 );
 ```
+
+## Working on this library
+
+So, basically what I've found is the easiest way to do it (at least for iOS) is to react-native init a new project.
+
+Then enter the project, yarn add this repo, pod install, open ios workspace in Xcode, go to pods/developmentPods/RNDynamicCropper/*, and edit those files. run react-native run-ios to observe changes. Profit.
+
+When you have the files working the way you want, clone the repo, change the files to match the above edited ones (check iOS/src/*), then PR.
+
+I have a script that automates the app setup with a working App.js, moving images to the correct places, etc.
+
+I will add it here soon.
 
 ## License
 
