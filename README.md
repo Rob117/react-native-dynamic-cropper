@@ -4,15 +4,14 @@
 
 This library is iOS only right now - Android coming soon, I hope. This is to fulfill a specific need of a dynamic image cropper for both platforms that isn't available in a neat NPM package.
 
-## Screenshots
-
-Coming soon, in gif form!
+## Gif
+![capybara cropped](https://gyazo.com/9852c184cee9869e81b8c4d498810275)
 
 ## Warning
 
 This library was just released, so it still does not have error handing, test cases, etc. I plan to introduce those things as fast as possible.
 
-Roadmap:
+## Roadmap
 
 Circular crop option
 Locale support
