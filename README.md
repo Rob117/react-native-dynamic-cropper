@@ -5,7 +5,7 @@
 This library is iOS only right now - Android coming soon, I hope. This is to fulfill a specific need of a dynamic image cropper for both platforms that isn't available in a neat NPM package.
 
 ## Gif
-![capybara cropped](https://gyazo.com/9852c184cee9869e81b8c4d498810275)
+![capybara cropped](https://i.gyazo.com/9852c184cee9869e81b8c4d498810275.mp4)
 
 ## Warning
 
