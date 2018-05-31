@@ -14,9 +14,10 @@ This library was just released, so it still does not have error handing, test ca
 ## Roadmap
 
 Circular crop option
-Locale support
+Locale support (What about unsupported locales? -> RP to wrapped library will fix it)
 Title, done button, cancel button custom text
 Add testing script (it's not pretty, but it totally works)
+Options - background
 
 ## Install
 
