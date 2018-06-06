@@ -7,6 +7,7 @@
 //
 
 #import "RNDynamicCropper.h"
+#import <React/RCTConvert.h>
 #import "React/RCTLog.h"
 
 #if __has_include("TOCropViewController.h")
@@ -26,15 +27,29 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(cropImage:(NSString *)path resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject){
+RCT_EXPORT_METHOD(cropImage:(NSString *)path details:(NSDictionary *)details resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject){
   self.resolver = resolve;
   self.reject = reject;
+    NSString *title = [RCTConvert NSString:details[@"title"]];
+    NSString *cancelButtonTitle = [RCTConvert NSString:details[@"cancelText"]];
+    NSString *doneButtonTitle = [RCTConvert NSString:details[@"confirmText"]];
+    // NSString *locale = [RCTConvert NSString:details[@"locale"]];
   dispatch_async(dispatch_get_main_queue(), ^{
     // This code pretty much never chages. Take the path command that we passed from JS.
     // Read that data into an image. Open the image in the cropper.
     // Profit.
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     TOCropViewController *cropViewController = [[TOCropViewController alloc] initWithImage:image];
+      // Locale set here
+      if([title length] != 0){
+          cropViewController.title = title;
+      }
+      if([doneButtonTitle length] != 0){
+          cropViewController.doneButtonTitle = doneButtonTitle;
+      }
+      if([cancelButtonTitle length] != 0){
+          cropViewController.cancelButtonTitle = cancelButtonTitle;
+      }
     cropViewController.delegate = self;
     UINavigationController* contactNavigator = [[UINavigationController alloc] initWithRootViewController:cropViewController];
      [[self getRootVC] presentViewController:contactNavigator animated:NO completion:nil];

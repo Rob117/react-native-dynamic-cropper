@@ -13,11 +13,14 @@ This library was just released, so it still does not have error handing, test ca
 
 ## Roadmap
 
-Circular crop option
-Locale support (What about unsupported locales? -> PR to wrapped library will fix it)
-Title, done button, cancel button custom text
-Add testing script (it's not pretty, but it totally works)
-Options - background, aspect ratio locked, toolbar at top option
+* Circular crop option
+* Locale support (What about unsupported locales? -> PR to wrapped library will fix it)
+* Add testing script (it's not pretty, but it totally works)
+* Options - background, aspect ratio locked, toolbar at top option
+* Fix dependency errors
+* Specify version of library that this is dependent on
+
+Add android support - Nothing comparable out there?
 
 ## Install
 
@@ -80,7 +83,7 @@ Not there yet.
 ```javascript
 import DynamicCropper from "react-native-dynamic-cropper";
 
-DynamicCropper.cropImage(pathToImageOnDisk).then(newlyCroppedImagePath =>
+DynamicCropper.cropImage(pathToImageOnDisk, {cancelText: "anything", confirmText: "You can leave these blank", title: "also optional"}).then(newlyCroppedImagePath =>
   console.log(newlyCroppedImagePath)
 );
 ```
