@@ -22,6 +22,8 @@ This library was just released, so it still does not have error handing, test ca
 
 Add android support - Nothing comparable out there?
 
+https://github.com/Yalantis/uCrop
+
 ## Install
 
 `yarn add react-native-dynamic-cropper`
