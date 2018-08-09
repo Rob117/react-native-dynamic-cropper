@@ -108,4 +108,4 @@ MIT
 
 ## In case of abandonment
 
-If I don't respond to any issues or pull requests in 60 days, assume the worst. In that case, I officially support the react native community github group cloning this project and becoming the official maintainers.
+If I don't respond to any issues or pull requests in 60 days, assume the worst. In that case, I officially support the react native community github group cloning this project and becoming the official maintainers. Please note that simply not making any commits is not the same as relinquishing control - this is basically a clause so that if I decide I'm not maintaining this anymore or if something happens to me, the community gets my code.
