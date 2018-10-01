@@ -13,14 +13,13 @@ This library was just released, so it still does not have error handing, test ca
 
 ## Roadmap
 
+* Add licenses for TOCropper library and Yalantis cropper
 * Circular crop option
 * Locale support (What about unsupported locales? -> PR to wrapped library will fix it)
 * Add testing script (it's not pretty, but it totally works)
 * Options - background, aspect ratio locked, toolbar at top option
 * Fix dependency errors
 * Specify version of library that this is dependent on
-
-Add android support - Nothing comparable out there?
 
 https://github.com/Yalantis/uCrop
 
