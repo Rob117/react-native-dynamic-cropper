@@ -14,13 +14,15 @@ This library was just released, so it still does not have error handing, test ca
 ## Roadmap
 
 * Add licenses for TOCropper library and Yalantis cropper
-* Circular crop option
-* Locale support (What about unsupported locales? -> PR to wrapped library will fix it)
+* Circular crop option (easy PR)
 * Add testing script (it's not pretty, but it totally works)
-* Options - background, aspect ratio locked, toolbar at top option
-* Fix dependency errors
-* Specify version of library that this is dependent on
+* Options - background, aspect ratio locked, toolbar at top option (easy PR)
+* Fix dev dependency errors (PR welcome from someone in the know).
+* Specify version of library that this is dependent on (Easy PR)
+* Locale support? (What about unsupported locales? -> PR to wrapped library will fix it)
+* Upgrade to swift when RN has better Swift support (PR's TOTALLY welcome here)
 
+Add the following library - can I create a Kotlin bridge? Is that wise? Because I use Kotlin at work, and it is the bee's knees.
 https://github.com/Yalantis/uCrop
 
 ## Install
@@ -99,11 +101,11 @@ When you have the files working the way you want, clone the repo, change the fil
 
 I have a script that automates the app setup with a working App.js, moving images to the correct places, etc.
 
-I will add it here soon.
+I will add it here. Or implement actual test files. I'm not 100% sure what I'm doing, I just want to make this available for other people.
 
 ## License
 
-MIT
+MIT, MIT for TOCropper, APACHE 2.0 for Yalantis
 
 ## In case of abandonment
 
