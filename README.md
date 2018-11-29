@@ -13,6 +13,8 @@ This library was just released, so it still does not have error handing, test ca
 
 ## Roadmap
 
+Hurry up on all the cool backend stuff for a certain project so I can work on this library!
+
 * Add licenses for TOCropper library and Yalantis cropper
 * Circular crop option (easy PR)
 * Add testing script (it's not pretty, but it totally works)
