@@ -15,14 +15,18 @@ This library is very much under active development, so it still does not have er
 
 ## Roadmap
 
-* Circular crop option - Easy PR
-* Locale support (What about unsupported locales? -> PR to wrapped library will fix it)
-* Options - background, aspect ratio locked, toolbar at top option -  Easy PR
-* Fix dependency errors
-* Specify version of library that this is dependent on
-
 Add android support -
 
+Hurry up on all the cool backend stuff for a certain project so I can work on this library!
+
+* Circular crop option (easy PR)
+* Options - background, aspect ratio locked, toolbar at top option (easy PR)
+* Fix dev dependency errors (PR welcome from someone in the know).
+* Specify version of library that this is dependent on (Easy PR for anyone with experience)
+* Locale support? (What about unsupported locales? -> PR to wrapped library will fix it)
+* Upgrade to swift when RN has better Swift support (PR's TOTALLY welcome here)
+
+Add the following library - can I create a Kotlin bridge? Is that wise? Because I use Kotlin at work, and it is the bee's knees.
 https://github.com/Yalantis/uCrop
 
 ## Install
@@ -112,9 +116,9 @@ NOTE: For app.js, just copy-paste the premade one I have here as sampleAppjs.js,
 
 ## License
 
-MIT
+MIT, MIT for TOCropper, APACHE 2.0 for Yalantis
 Specifically, I really just want people to use this, so feel free to use it however you like. If you could put a credit somewhere, that would be awesome but absolutely isn't necessary.
 
 ## In case of abandonment
 
-If I don't respond to any issues or pull requests in 60 days, assume the worst. In that case, I officially support the react native community github group cloning this project and becoming the official maintainers.
+If I don't respond to any issues or pull requests in 60 days, I officially support the react native community github group cloning this project and becoming the official maintainers. Please note that simply not making any commits is not the same as relinquishing control - this is basically a clause so that if I decide I'm not maintaining this anymore or if something happens to me, the community gets my code.
