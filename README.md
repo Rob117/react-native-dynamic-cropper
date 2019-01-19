@@ -94,7 +94,7 @@ Coming soon, TM.
 ```javascript
 import DynamicCropper from "react-native-dynamic-cropper";
 
-DynamicCropper.cropImage(pathToImageOnDisk, {cancelText: "anything", confirmText: "You can leave these blank", title: "also optional"}).then(newlyCroppedImagePath =>
+DynamicCropper.cropImage(pathToImageOnDisk, {cancelText: "anything", confirmText: "You can leave these blank", title: "also optional", filePath: "Absolute path on a simulator, otherwise the path that your imagepicker gives you"}).then(newlyCroppedImagePath =>
   console.log(newlyCroppedImagePath)
 );
 ```
