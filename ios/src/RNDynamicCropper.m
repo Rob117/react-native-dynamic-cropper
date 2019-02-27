@@ -117,6 +117,22 @@ RCT_EXPORT_METHOD(cropImage:(NSString *)path details:(NSDictionary *)details res
   // Close the UIView
   [cropViewController dismissViewControllerAnimated:YES completion:nil];
   // Return the path so it can be manipulated elsewhere.
+ 
+  if(cropRect){
+      NSNumber *x = [NSNumber numberWithInt:(int)cropRect.origin.x];
+      NSNumber *y = [NSNumber numberWithInt:(int)cropRect.origin.y];
+      NSNumber *width = [NSNumber numberWithInt:(int)cropRect.size.width];
+      NSNumber *height = [NSNumber numberWithInt:(int)cropRect.size.height];
+
+      NSDictionary *returnDict = @{
+                                   @"x" : x,
+                                   @"y" : y,
+                                   @"width" : width,
+                                   @"height" : height,
+                                   @"path" : filePath
+                                   };
+      self.resolver(returnDict);
+  }  
   self.resolver(filePath);
 }
 
