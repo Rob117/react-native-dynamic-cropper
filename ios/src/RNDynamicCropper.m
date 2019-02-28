@@ -66,6 +66,8 @@ RCT_EXPORT_METHOD(cropImage:(NSString *)path details:(NSDictionary *)details res
     NSString *cancelButtonTitle = [RCTConvert NSString:details[@"cancelText"]];
     NSString *doneButtonTitle = [RCTConvert NSString:details[@"confirmText"]];
     NSString *passedInFilePath = [RCTConvert NSString:details[@"filePath"]];
+    NSNumber *hideRotation = [RCTConvert NSNumber:details[@"hideRotation"]];
+    
     // NSString *locale = [RCTConvert NSString:details[@"locale"]];
   dispatch_async(dispatch_get_main_queue(), ^{
     // This code pretty much never chages. Take the path command that we passed from JS.
@@ -89,7 +91,14 @@ RCT_EXPORT_METHOD(cropImage:(NSString *)path details:(NSDictionary *)details res
       } else {
            [GlobalVars sharedGlobalVars].filePath = @"temp.jpg";
       }
+      if([hideRotation isEqual:[NSNumber numberWithBool:YES]]){
+        cropViewController.rotateClockwiseButtonHidden = true;
+        cropViewController.rotateButtonsHidden = true;
+        cropViewController.aspectRatioLockEnabled = true;
+      }
     cropViewController.delegate = self;
+   
+      
     UINavigationController* contactNavigator = [[UINavigationController alloc] initWithRootViewController:cropViewController];
      [[self getRootVC] presentViewController:contactNavigator animated:NO completion:nil];
   });
