@@ -11,7 +11,7 @@ PR's welcome
 
 ## Warning
 
-This library is very much under active development, so it still does not have error handing, test cases, etc. I plan to introduce those things as fast as possible, but I'm really adding features as I need them.
+This library is no longer maintained
 
 ## Roadmap
 
